@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx creator="StravaGPX" version="1.1" xmlns="http://www.topografix.com/GPX/1/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd">
+ <metadata>
+  <time>2017-07-02T15:42:59Z</time>
+ </metadata>
+ <trk>
+  <name>upper Colorado Trail to Taylor Lake O&amp;B (from CR 204 via Durango) </name>
+  <trkseg>
+   <trkpt lat="37.4498920" lon="-107.9849500">
+    <ele>3165.0</ele>
+    <time>2017-07-02T15:43:04Z</time>
+   </trkpt>
+   <trkpt lat="37.4499030" lon="-107.9849400">
+    <ele>3164.9</ele>
+    <time>2017-07-02T15:43:05Z</time>
+   </trkpt>
+   <trkpt lat="37.4499150" lon="-107.9849290">
+    <ele>3164.9</ele>
+    <time>2017-07-02T15:43:06Z</time>
+   </trkpt>
+   <trkpt lat="37.4499270" lon="-107.9849170">
+    <ele>3164.8</ele>
+    <time>2017-07-02T15:43:07Z</time>
+   </trkpt>
+   <trkpt lat="37.4499400" lon="-107.9849040">
+    <ele>3164.7</ele>
+    <time>2017-07-02T15:43:08Z</time>
+   </trkpt>
+   <trkpt lat="37.4499530" lon="-107.9848880">
+    <ele>3164.6</ele>
+    <time>2017-07-02T15:43:09Z</time>
+   </trkpt>
+  </trkseg>
+ </trk>
+</gpx>
