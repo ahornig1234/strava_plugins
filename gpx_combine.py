@@ -2,9 +2,10 @@ import sys
 
 def main():
   '''Given two filenames as arguments, appends the 2nd to the 1st.
-    Metadata is taken from 1st file. Activity name is defaulted to the name
-    from 1st file but this can be specified as 3rd argument. Filename of output
-    is default to 'combined_gpx' but this can be specified as a 4th argument.'''
+     Metadata and gpx info is taken from 1st file. Activity name is defaulted to
+     the name from 1st file but this can be specified as 3rd argument. Filename 
+     of output is default to 'combined_gpx' but this can be specified as a 4th
+     argument.'''
   
   try:
     file1 = sys.argv[1]
@@ -40,26 +41,22 @@ def main():
   #open output file
   f3 = open(filename, 'w')
 
-  #write generic header
-  f3.write('<?xml version="1.0" encoding="UTF-8"?>\n')
-  f3.write('<gpx creator="StravaGPX" version="1.1"'
-            ' xmlns="http://www.topografix.com/GPX/1/1"'
-            ' xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"'
-            ' xsi:schemaLocation="http://www.topografix.com/GPX/1/1'
-            ' http://www.topografix.com/GPX/1/1/gpx.xsd">\n')
+#  #write generic header
+#  f3.write('<?xml version="1.0" encoding="UTF-8"?>\n')
+#  f3.write('<gpx creator="StravaGPX" version="1.1"'
+#            ' xmlns="http://www.topografix.com/GPX/1/1"'
+#            ' xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"'
+#            ' xsi:schemaLocation="http://www.topografix.com/GPX/1/1'
+#            ' http://www.topografix.com/GPX/1/1/gpx.xsd">\n')
 
   #go through file1 and get needed info
-  get_metadata = False
+  get_metadata = True
   get_activityname = False
   findname = (activityname == " ")
   get_gpsdata = False
   for line in f1:
     #copy metadata from file1
-    if '<metadata>' in line.strip():
-      f3.write(line)
-      if '</metadata>' not in line.strip():
-        get_metadata = True
-    elif '</metadata>' in line.strip():
+    if '</metadata>' in line.strip():
       get_metadata = False
       f3.write(line)
       f3.write(' <trk>\n')
