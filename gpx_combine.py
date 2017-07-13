@@ -6,7 +6,8 @@ def main():
      the name from 1st file but this can be specified as 3rd argument. Filename 
      of output is default to 'combined_gpx' but this can be specified as a 4th
      argument.'''
-  
+
+
   try:
     file1 = sys.argv[1]
     file2 = sys.argv[2]
@@ -41,14 +42,6 @@ def main():
 
   #open output file
   f3 = open(filename, 'w')
-
-#  #write generic header
-#  f3.write('<?xml version="1.0" encoding="UTF-8"?>\n')
-#  f3.write('<gpx creator="StravaGPX" version="1.1"'
-#            ' xmlns="http://www.topografix.com/GPX/1/1"'
-#            ' xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"'
-#            ' xsi:schemaLocation="http://www.topografix.com/GPX/1/1'
-#            ' http://www.topografix.com/GPX/1/1/gpx.xsd">\n')
 
   #go through file1 and get needed info
   get_metadata = True
