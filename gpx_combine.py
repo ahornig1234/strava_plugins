@@ -1,11 +1,10 @@
 import sys
 
-#def main(file1, file2, activityname=" ", filename = 'combined.gpx'):
 def main():
-  '''Given two filenames as argumeents, merges the 2nd after the 1st.
+  '''Given two filenames as arguments, merges the 2nd after the 1st.
     Metadata is taken from 1st file. Activity name is defaulted to the name
-    1st file but this can be specified as 3rd argument. Filename of output  is 
-    default to 'combined_gpx' but this can be specified as a 4th argument.'''
+    from 1st file but this can be specified as 3rd argument. Filename of output
+    is default to 'combined_gpx' but this can be specified as a 4th argument.'''
   
   try:
     file1 = sys.argv[1]
