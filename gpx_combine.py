@@ -10,10 +10,12 @@ def main():
     file1 = sys.argv[1]
     file2 = sys.argv[2]
   except:
-    sys.exit("Error, needs 2-4 args of the form file1, file2, activityname=" ", filename = 'combined.gpx'")
+    sys.exit("Error, needs 2-4 args of the form file1, file2,\
+              activityname=" ", filename = 'combined.gpx'")
 
   #set default values
-  if len(sys.argv) >=5:
+  assert len(sys.argv)<=5,"Too many args!"
+  if len(sys.argv) ==5:
     filename = sys.argv[4]
   else:
     filename = 'combined.gpx'
