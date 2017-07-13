@@ -12,7 +12,7 @@ def main():
     file2 = sys.argv[2]
   except:
     sys.exit("Error, needs 2-4 args of the form file1, file2,\
-              activityname=" ", filename = 'combined.gpx'")
+              activityname=file1_name, filename = 'combined.gpx'")
 
   #set default values
   assert len(sys.argv)<=5,"Too many args!"
@@ -22,9 +22,10 @@ def main():
     filename = 'combined.gpx'
 
   if len(sys.argv) >= 4:
-    activityname  =sys.argv[3]
+    activityname = sys.argv[3]
+    replace_activityname = True
   else:
-    activityname = " "
+    replace_activityname = False
 
   #open file 1
   try:
@@ -52,7 +53,6 @@ def main():
   #go through file1 and get needed info
   get_metadata = True
   get_activityname = False
-  findname = (activityname == " ")
   get_gpsdata = False
   for line in f1:
     #copy metadata from file1
@@ -61,14 +61,14 @@ def main():
       f3.write(line)
       f3.write(' <trk>\n')
       #put in activityname after metadata if specified as arg
-      if not findname:
+      if replace_activityname:
         f3.write('  <name>'+activityname+'</name>\n')
         f3.write('  <trkseg>\n')
     elif get_metadata:
       f3.write(line)
 
     #get activityname from file1 if not specified as arg
-    if findname:
+    if not replace_activityname:
       if '<name>' in line.strip():
         f3.write(line)
         if '</name>' not in line.strip():
