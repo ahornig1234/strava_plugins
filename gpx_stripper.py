@@ -38,7 +38,7 @@ file-output = 'file-input_stripped.gpx'")
   for line in f_in:
     #remove HR and Cadence
     if not '<gpxtpx:hr>' in line.strip() and not '<gpxtpx:cad>' in line.strip():
-    #replace activityname if needed
+    #replace activityname if user gives a replacement
       if replace_activityname:
         f_out.write(re.sub(r'.*<name>.*</name>',
           '  <name>'+activityname+'</name>', line))
