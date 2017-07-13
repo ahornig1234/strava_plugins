@@ -10,4 +10,4 @@ Metadata is taken from 1st file. Activity name is defaulted to the name
 1st file but this can be specified as 3rd argument. Filename of output  is 
 default to 'combined_gpx' but this can be specified as a 4th argument.
 
-'''python gpx_combine.py file1.gpx file2.gpx [activity name = "my run"] [output = "my file"]'''
+```python gpx_combine.py file1.gpx file2.gpx [activity name = "my run"] [output = "my file"]```
