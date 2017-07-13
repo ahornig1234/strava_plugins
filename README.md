@@ -13,7 +13,7 @@ argument.
 
 ```python gpx_combine.py file1.gpx file2.gpx [activity name = name_from_file1] [output = "combined.gpx"]```
 
-### gpx_strip_HR.py
+### gpx_stripper.py
 
 Given a filename (.gpx), strips all cadence and heart rate data. Output defaults to "filename_stripped.gpx" but this can be specified as 2nd argument. Can change activity name by giving a 3rd argument. 
 
